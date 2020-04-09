@@ -139,7 +139,7 @@ const Espai = () => (
         justify-content: center;
         flex-wrap: wrap;
 
-        max-width: 800px;
+        max-width: 960px;
         margin-top: 3rem;
       }
 
@@ -161,6 +161,11 @@ const Espai = () => (
         align-items: center;
       }
 
+      .card header img {
+        max-width: 60px;
+        padding: 0.5rem;
+      }
+
       .card:hover,
       .card:focus,
       .card:active {
@@ -170,7 +175,7 @@ const Espai = () => (
 
       .card h3 {
         margin: 0 0 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       .card p {
@@ -179,14 +184,15 @@ const Espai = () => (
         line-height: 1.5;
       }
 
-      .card img {
-        max-width: 75px;
-      }
-
       @media (max-width: 600px) {
         .grid {
           width: 100%;
           flex-direction: column;
+        }
+      }
+      @media (min-width: 1024px) {
+        .card header img {
+          max-width: 75px;
         }
       }
     `}</style>

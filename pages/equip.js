@@ -15,7 +15,6 @@ const Equip = () => (
 
     <main>
       <h1 className='title'>
-        <img src='/fer-un-equip.svg' alt='Crea un equip' />
         <br />
         Creeu un equip
       </h1>
@@ -86,14 +85,13 @@ const Equip = () => (
         text-align: center;
       }
 
-      .title img,
-      .description img {
-        max-width: 150px;
-      }
-
       .description {
         line-height: 1.5;
         font-size: 1.5rem;
+      }
+
+      .description img {
+        max-width: 150px;
       }
 
       code {
@@ -111,7 +109,7 @@ const Equip = () => (
         justify-content: center;
         flex-wrap: wrap;
 
-        max-width: 800px;
+        max-width: 960px;
         margin-top: 3rem;
       }
 
@@ -131,6 +129,17 @@ const Equip = () => (
         flex-basis: 100%;
       }
 
+      .card header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .card header img {
+        max-width: 60px;
+        padding: 0.5rem;
+      }
+
       .card:hover,
       .card:focus,
       .card:active {
@@ -140,7 +149,7 @@ const Equip = () => (
 
       .card h3 {
         margin: 0 0 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       .card p {
@@ -153,6 +162,11 @@ const Equip = () => (
         .grid {
           width: 100%;
           flex-direction: column;
+        }
+      }
+      @media (min-width: 1024px) {
+        .card header img {
+          max-width: 75px;
         }
       }
     `}</style>

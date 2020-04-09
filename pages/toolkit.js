@@ -30,6 +30,10 @@ const Toolkit = () => (
         </a>
         <div className='card'>
           <header>
+            <img
+              src='/material-participacio-toolkit.svg'
+              alt='Gui eines de treball'
+            />
             <h3>Material particiapció &rarr;</h3>
           </header>
           <p>
@@ -44,6 +48,10 @@ const Toolkit = () => (
         </div>
         <div className='card'>
           <header>
+            <img
+              src='/eines-de-treball-toolkit.svg'
+              alt='Gui eines de treball'
+            />
             <h3>Eines de treball &rarr;</h3>
           </header>
           <p>
@@ -138,7 +146,7 @@ const Toolkit = () => (
         justify-content: center;
         flex-wrap: wrap;
 
-        max-width: 800px;
+        max-width: 960px;
         margin-top: 3rem;
       }
 
@@ -160,6 +168,11 @@ const Toolkit = () => (
         align-items: center;
       }
 
+      .card header img {
+        max-width: 60px;
+        padding: 0.5rem;
+      }
+
       .card:hover,
       .card:focus,
       .card:active {
@@ -169,7 +182,7 @@ const Toolkit = () => (
 
       .card h3 {
         margin: 0 0 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       .card p {
@@ -178,14 +191,15 @@ const Toolkit = () => (
         line-height: 1.5;
       }
 
-      .card img {
-        max-width: 75px;
-      }
-
       @media (max-width: 600px) {
         .grid {
           width: 100%;
           flex-direction: column;
+        }
+      }
+      @media (min-width: 1024px) {
+        .card header img {
+          max-width: 75px;
         }
       }
     `}</style>

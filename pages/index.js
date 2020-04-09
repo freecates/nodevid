@@ -59,8 +59,11 @@ const Home = () => (
           className='card'>
           <h3>Com fer un node &rarr;</h3>
           <p>
-            Fer un equip > Busqueu afinitats > Escolliu Node > Construiu >
-            Gaudiu > Guanyeu
+            Fer un equip >{' '}
+            <img src='/busqueu-afinitats.svg' alt='Busqueu afinitats' /> Busqueu
+            afinitats > <img src='/escolliu-node.svg' alt='Busqueu afinitats' />{' '}
+            Escolliu Node > <img src='/construiu.svg' alt='Busqueu afinitats' />{' '}
+            Construiu > Gaudiu > Guanyeu
           </p>
         </a>
       </div>
@@ -165,13 +168,17 @@ const Home = () => (
 
       .card h3 {
         margin: 0 0 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       .card p {
         margin: 0;
         font-size: 1.25rem;
         line-height: 1.5;
+      }
+
+      .card img {
+        max-width: 50px;
       }
 
       @media (max-width: 600px) {
