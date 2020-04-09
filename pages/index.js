@@ -6,7 +6,7 @@ import Nav from '../components/Nav';
 const Home = () => (
   <div className='container'>
     <Head>
-      <title>Create Next App</title>
+      <title>Benvingut a NodeVid!</title>
       <link rel='icon' href='/favicon.ico' />
     </Head>
 
