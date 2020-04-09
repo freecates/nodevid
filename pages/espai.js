@@ -25,14 +25,20 @@ const Espai = () => (
       <h3>En obert - per a tothom || Intern - només per a la comunitat</h3>
       <div className='grid'>
         <a className='card'>
-          <h3>Node Esport &rarr;</h3>
+          <header>
+            <img src='/node-esport.svg' alt='Node esport' />
+            <h3>Node Esport &rarr;</h3>
+          </header>
           <ul>
             <li>Pràctiva</li>
             <li>Competició</li>
           </ul>
         </a>
         <a className='card'>
-          <h3>Node Botànic &rarr;</h3>
+          <header>
+            <img src='/node-botanic.svg' alt='Node botànic' />
+            <h3>Node Botànic &rarr;</h3>
+          </header>
           <ul>
             <li>Jardí</li>
             <li>Hort</li>
@@ -40,7 +46,10 @@ const Espai = () => (
           </ul>
         </a>
         <a className='card'>
-          <h3>Node Cultura &rarr;</h3>
+          <header>
+            <img src='/node-cultura.svg' alt='Node cultura' />
+            <h3>Node Cultura &rarr;</h3>
+          </header>
           <ul>
             <li>Teatre - dansa</li>
             <li>Música</li>
@@ -49,7 +58,10 @@ const Espai = () => (
           </ul>
         </a>
         <a className='card'>
-          <h3>Node Educació &rarr;</h3>
+          <header>
+            <img src='/node-educacio.svg' alt='Node educacio' />
+            <h3>Node Educació &rarr;</h3>
+          </header>
           <ul>
             <li>Pràctiva</li>
             <li>Competició</li>
@@ -143,6 +155,12 @@ const Espai = () => (
         transition: color 0.15s ease, border-color 0.15s ease;
       }
 
+      .card header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
       .card:hover,
       .card:focus,
       .card:active {
@@ -159,6 +177,10 @@ const Espai = () => (
         margin: 0;
         font-size: 1.25rem;
         line-height: 1.5;
+      }
+
+      .card img {
+        max-width: 75px;
       }
 
       @media (max-width: 600px) {

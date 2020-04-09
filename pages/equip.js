@@ -14,7 +14,11 @@ const Equip = () => (
     </header>
 
     <main>
-      <h1 className='title'>Creeu un equip</h1>
+      <h1 className='title'>
+        <img src='/fer-un-equip.svg' alt='Crea un equip' />
+        <br />
+        Creeu un equip
+      </h1>
 
       <div className='grid'>
         <div className='card'>
@@ -27,6 +31,8 @@ const Equip = () => (
         </div>
       </div>
       <p className='description'>
+        <img src='/formulari-equip.svg' alt='Formulari creació equip' />
+        <br />
         <code>TODO : formulari equip</code>
       </p>
     </main>
@@ -78,6 +84,11 @@ const Equip = () => (
       .title,
       .description {
         text-align: center;
+      }
+
+      .title img,
+      .description img {
+        max-width: 150px;
       }
 
       .description {

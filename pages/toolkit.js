@@ -17,16 +17,21 @@ const Toolkit = () => (
       <h1 className='title'>Toolkit</h1>
 
       <div className='grid'>
-        <div className='card'>
-          <h3>Guia Node - PDF &rarr;</h3>
+        <a className='card'>
+          <header>
+            <img src='/guia-toolkit.svg' alt='Gui participació' />
+            <h3>Guia Node - PDF &rarr;</h3>
+          </header>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             faucibus arcu in rhoncus condimentum. Ut tempus, sapien sed rhoncus
             commodo, magna ex eleifend nisl, id fringilla turpis justo in lorem.
           </p>
-        </div>
+        </a>
         <div className='card'>
-          <h3>Material particiapció &rarr;</h3>
+          <header>
+            <h3>Material particiapció &rarr;</h3>
+          </header>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             faucibus arcu in rhoncus condimentum. Ut tempus, sapien sed rhoncus
@@ -38,7 +43,9 @@ const Toolkit = () => (
           </ul>
         </div>
         <div className='card'>
-          <h3>Eines de treball &rarr;</h3>
+          <header>
+            <h3>Eines de treball &rarr;</h3>
+          </header>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             faucibus arcu in rhoncus condimentum. Ut tempus, sapien sed rhoncus
@@ -50,7 +57,9 @@ const Toolkit = () => (
           </ul>
         </div>
         <div className='card'>
-          <h3>Fitxa per compatir &rarr;</h3>
+          <header>
+            <h3>Fitxa per compatir &rarr;</h3>
+          </header>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             faucibus arcu in rhoncus condimentum. Ut tempus, sapien sed rhoncus
@@ -145,6 +154,12 @@ const Toolkit = () => (
         transition: color 0.15s ease, border-color 0.15s ease;
       }
 
+      .card header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
       .card:hover,
       .card:focus,
       .card:active {
@@ -161,6 +176,10 @@ const Toolkit = () => (
         margin: 0;
         font-size: 1.25rem;
         line-height: 1.5;
+      }
+
+      .card img {
+        max-width: 75px;
       }
 
       @media (max-width: 600px) {
