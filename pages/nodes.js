@@ -49,7 +49,10 @@ const Nodes = ({ data }) => {
                 {c.publicProfile.map((p, id) => (
                   <dd key={p.type} id={id}>
                     {p.type} :{' '}
-                    <a href={p.url} title={`${p.type} de ${c.projectName}`}>
+                    <a
+                      href={p.url}
+                      title={`${p.type} de ${c.projectName}`}
+                      className='dont-break-out'>
                       {p.url}
                     </a>
                   </dd>
@@ -164,6 +167,12 @@ const Nodes = ({ data }) => {
           margin: 0;
           font-size: 1.25rem;
           line-height: 1.5;
+        }
+
+        .dont-break-out {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          word-break: break-word;
         }
 
         @media (max-width: 600px) {
