@@ -85,7 +85,6 @@ const Espai = ({ data }) => {
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
-          color: #4af626;
         }
 
         .title {

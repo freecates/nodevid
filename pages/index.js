@@ -94,7 +94,6 @@ const Home = ({ data }) => {
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
-          color: #4af626;
         }
 
         .title,
@@ -149,7 +148,6 @@ const Home = ({ data }) => {
         .card h3 {
           margin: 0 0 1rem 0;
           font-size: 1.25rem;
-          color: #4af626;
         }
 
         .card p {
