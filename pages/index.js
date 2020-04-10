@@ -14,7 +14,7 @@ const Home = ({ data }) => {
       </Head>
 
       <header>
-        <Nav />
+        <Nav page={'home'} />
       </header>
 
       <main>
