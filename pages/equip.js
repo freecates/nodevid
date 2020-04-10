@@ -34,7 +34,7 @@ const Equip = ({ data }) => {
         </div>
 
         <p className='description'>
-          <img src={`/${formIcon.url}`} alt={formIcon.alt} />
+          <img loading='lazy' src={`/${formIcon.url}`} alt={formIcon.alt} />
           <br />
           <code>TODO : formulari equip</code>
         </p>

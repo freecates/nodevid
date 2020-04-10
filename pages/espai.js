@@ -29,7 +29,7 @@ const Espai = ({ data }) => {
           {content.map((c, id) => (
             <a href='/' className='card' key={c.id} id={id}>
               <header>
-                <img src={c.icon.url} alt={c.icon.alt} />
+                <img loading='lazy' src={c.icon.url} alt={c.icon.alt} />
                 <h3>{c.title} &rarr;</h3>
               </header>
               <p>{c.leadText}</p>

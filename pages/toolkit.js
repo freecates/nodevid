@@ -19,7 +19,11 @@ const Toolkit = () => (
       <div className='grid'>
         <a className='card'>
           <header>
-            <img src='/guia-toolkit.svg' alt='Gui participació' />
+            <img
+              loading='lazy'
+              src='/guia-toolkit.svg'
+              alt='Gui participació'
+            />
             <h3>Guia Node - PDF &rarr;</h3>
           </header>
           <p>
@@ -31,6 +35,7 @@ const Toolkit = () => (
         <div className='card'>
           <header>
             <img
+              loading='lazy'
               src='/material-participacio-toolkit.svg'
               alt='Gui eines de treball'
             />
@@ -49,6 +54,7 @@ const Toolkit = () => (
         <div className='card'>
           <header>
             <img
+              loading='lazy'
               src='/eines-de-treball-toolkit.svg'
               alt='Gui eines de treball'
             />

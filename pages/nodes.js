@@ -25,6 +25,7 @@ const Nodes = ({ data }) => {
           {examples.map((c, id) => (
             <div href='/' className='card' key={c.id} id={id}>
               <img
+                loading='lazy'
                 src={c.picture}
                 alt={`Imatge representativa de ${c.projectName}`}
               />
