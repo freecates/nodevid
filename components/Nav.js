@@ -13,17 +13,20 @@ const Nav = ({ page }) => {
           />
         </a>
       </Link>
-      <Link href='/equip'>
-        <a>Crea un equip</a>
-      </Link>
       <Link href='/espai'>
-        <a>Espai - Node</a>
+        <a>Espais Node</a>
       </Link>
       <Link href='/toolkit'>
         <a>Toolkit</a>
       </Link>
       <Link href='/nodes'>
-        <a>Descobreix nodes</a>
+        <a>Descobreix</a>
+      </Link>
+      <Link href='/equip'>
+        <a>Participa</a>
+      </Link>
+      <Link href='/guanya'>
+        <a>Guanya</a>
       </Link>
       <Link href='/bloc'>
         <a>Bloc</a>

@@ -1,10 +1,9 @@
-import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 
-const Nodes = ({ data }) => {
-  const { title, description, examples } = data;
+const Guanya = ({ data }) => {
+  const { title, content } = data;
   return (
     <div className='container'>
       <Head>
@@ -19,41 +18,20 @@ const Nodes = ({ data }) => {
       <main>
         <h1 className='title'>{title}</h1>
 
-        <p className='description'>{description}</p>
-
         <div className='grid'>
-          {examples.map((c, id) => (
+          {content.map((c, id) => (
             <div href='/' className='card' key={c.id} id={id}>
-              <img
-                loading='lazy'
-                src={c.picture}
-                alt={`Imatge representativa de ${c.projectName}`}
-              />
-              <h3>{c.teamName} &rarr;</h3>
+              <h3>{c.title} &rarr;</h3>
+              <p>{c.leadText}</p>
               <dl>
-                <dt>Nom del projecte:</dt>
-                <dd>{c.projectName}</dd>
-                <dt>Contacte:</dt>
-                <dd>
-                  <a
-                    href={`mailto:${c.contact}`}
-                    title={`Contacta amb ${c.projectName}`}>
-                    {c.contact}
-                  </a>
-                </dd>
-                <dt>Tipus:</dt>
-                <dd>{c.type}</dd>
-                <dt>Descripció del projecte:</dt>
-                <dd>{c.projectDescription}</dd>
-                <dt>Perfil públic:</dt>
-                {c.publicProfile.map((p, id) => (
-                  <dd key={p.type} id={id}>
-                    {p.type} :{' '}
+                <dt>Docs:</dt>
+                {c.docs.map((d, id) => (
+                  <dd key={d.name} id={id}>
                     <a
-                      href={p.url}
-                      title={`${p.type} de ${c.projectName}`}
+                      href={d.url}
+                      title={`${d.name} - Descarrega`}
                       className='dont-break-out'>
-                      {p.url}
+                      {d.name}
                     </a>
                   </dd>
                 ))}
@@ -107,7 +85,8 @@ const Nodes = ({ data }) => {
           font-size: 4rem;
         }
 
-        .title {
+        .title,
+        .description {
           text-align: center;
         }
 
@@ -147,8 +126,15 @@ const Nodes = ({ data }) => {
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 
-        .card img {
-          max-width: 100%;
+        .card header {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        .card header img {
+          max-width: 60px;
+          padding: 0.5rem;
         }
 
         .card:hover,
@@ -167,12 +153,6 @@ const Nodes = ({ data }) => {
           margin: 0;
           font-size: 1.25rem;
           line-height: 1.5;
-        }
-
-        .dont-break-out {
-          overflow-wrap: break-word;
-          word-wrap: break-word;
-          word-break: break-word;
         }
 
         @media (max-width: 600px) {
@@ -211,9 +191,9 @@ export const getStaticProps = async () => {
   const dataRes = await res.json();
   return {
     props: {
-      data: dataRes.find((x) => x.id == 4),
+      data: dataRes.find((x) => x.id == 6),
     },
   };
 };
 
-export default Nodes;
+export default Guanya;

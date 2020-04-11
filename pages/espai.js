@@ -192,7 +192,7 @@ export const getStaticProps = async () => {
   const dataRes = await res.json();
   return {
     props: {
-      data: dataRes.find((x) => x.id == 3),
+      data: dataRes.find((x) => x.id == 2),
     },
   };
 };
