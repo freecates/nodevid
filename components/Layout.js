@@ -2,12 +2,13 @@ import Footer from './Footer';
 import Nav from './Nav';
 
 const Layout = (props) => (
-  <div className='container'>
-    <header>
+  <>
+    <header className='header-nav'>
       <Nav page={props.page} />
     </header>
-    <main>{props.children}</main>
-
+    <div className='container'>
+      <main>{props.children}</main>
+    </div>
     <Footer page={props.page} />
 
     <style jsx global>{`
@@ -22,8 +23,42 @@ const Layout = (props) => (
       * {
         box-sizing: border-box;
       }
+      .header-nav {
+        height: 116px; /* 100 + 16 */
+        position: sticky;
+        top: -16px;
+        z-index: 1;
+        width: 100%;
+      }
+
+      .header-nav::before,
+      .header-nav::after {
+        content: '';
+        display: block;
+        height: 16px;
+        position: sticky;
+      }
+
+      .header-nav::before {
+        top: 84px; /* 100 - 16 */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      }
+
+      .header-nav::after {
+        background: linear-gradient(white, rgba(255, 255, 255, 0.3));
+        top: 0;
+        z-index: 2;
+      }
+
+      .header-nav > nav {
+        background: #ffffff;
+        height: 100px;
+        position: sticky;
+        top: 0px;
+        margin-top: -16px;
+        z-index: 3;
+      }
       .container {
-        min-height: 100vh;
         padding: 0 0.5rem;
         display: flex;
         flex-direction: column;
@@ -83,8 +118,32 @@ const Layout = (props) => (
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
           DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
       }
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding: 0;
+        }
+        .header-nav {
+          height: 186px; /* 170 + 16 */
+        }
+
+        .header-nav::before {
+          top: 154px; /* 170 - 16 */
+        }
+
+        .header-nav > nav {
+          height: 170px;
+        }
+        .title {
+          font-size: 3rem;
+        }
+      }
     `}</style>
-  </div>
+  </>
 );
 
 export default Layout;

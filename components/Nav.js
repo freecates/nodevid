@@ -34,7 +34,6 @@ const Nav = ({ page }) => {
       <style jsx>{`
         nav {
           width: 100%;
-          height: 100px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -59,6 +58,12 @@ const Nav = ({ page }) => {
 
         a:last-child {
           padding-right: none;
+        }
+        @media (max-width: 600px) {
+          nav {
+            width: 100%;
+            flex-direction: column;
+          }
         }
       `}</style>
     </nav>

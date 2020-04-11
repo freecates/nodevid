@@ -41,6 +41,16 @@ const Home = ({ data }) => {
           color: #ffffff;
           background: #000000;
         }
+        .header-nav > nav {
+          background: #000000;
+        }
+
+        .header-nav::before {
+          box-shadow: none;
+        }
+        .header-nav::after {
+          background: none;
+        }
         .card {
           flex-basis: 100%;
         }

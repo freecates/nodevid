@@ -21,31 +21,31 @@ const Espai = ({ data }) => {
           <small>{moreDescription}</small>
         </p>
         <Grid data={content} />
-      </Layout>
 
-      <style jsx global>{`
-        .description {
-          text-align: left;
-        }
-        .card header {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-        }
-
-        .card header img {
-          max-width: 60px;
-          padding: 0.5rem;
-        }
-        .card p {
-          margin: 0;
-        }
-        @media (min-width: 1024px) {
-          .card header img {
-            max-width: 75px;
+        <style jsx global>{`
+          .description {
+            text-align: left;
           }
-        }
-      `}</style>
+          .card header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+          }
+
+          .card header img {
+            max-width: 60px;
+            padding: 0.5rem;
+          }
+          .card p {
+            margin: 0;
+          }
+          @media (min-width: 1024px) {
+            .card header img {
+              max-width: 75px;
+            }
+          }
+        `}</style>
+      </Layout>
     </>
   );
 };
