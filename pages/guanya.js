@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
