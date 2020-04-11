@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Grid = ({ data }) => {
   return (
     <div className='grid'>
@@ -54,7 +56,14 @@ const Grid = ({ data }) => {
                 )}
                 <h3>{c.title} &rarr;</h3>
               </header>
-              <p>{c.leadText}</p>
+              {!c.leadText ? null : <p>{c.leadText}</p>}
+              {!c.blockquote ? null : (
+                <Link href={'/posts/' + c.id}>
+                  <a>
+                    <blockquote>{c.blockquote}</blockquote>
+                  </a>
+                </Link>
+              )}
               {!c.docs ? null : (
                 <dl>
                   <dt>Docs:</dt>
