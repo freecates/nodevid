@@ -1,11 +1,37 @@
-const Footer = () => (
+import Link from 'next/link';
+
+const Footer = ({ page }) => (
   <footer>
-    <a
-      href='https://www.adhoc-cultura.com/'
-      target='_blank'
-      rel='noopener noreferrer'>
-      Powered by Adhoc Cultura
-    </a>
+    <p>
+      <Link href='/'>
+        <a title='Anar a la home'>
+          <img
+            src={`${
+              page == `home` ? `/logo-nodevid-white.svg` : `/logo-nodevid.svg`
+            }`}
+            alt='Logo Nodevid'
+          />
+        </a>
+      </Link>
+      Powered by:{' '}
+      <a
+        href='https://www.adhoc-cultura.com/'
+        target='_blank'
+        rel='noopener noreferrer'>
+        Adhoc Cultura
+      </a>{' '}
+      |{' '}
+      <a
+        href='http://www.oxygen.cat/'
+        target='_blank'
+        rel='noopener noreferrer'>
+        Oxygen
+      </a>{' '}
+      |{' '}
+      <a href='http://dauapps.com/' target='_blank' rel='noopener noreferrer'>
+        DAU Apps
+      </a>
+    </p>
     <style jsx>{`
       footer {
         width: 100%;
@@ -17,13 +43,8 @@ const Footer = () => (
       }
 
       footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-right: 0.5rem;
+        max-width: 30px;
       }
 
       a {
