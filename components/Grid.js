@@ -57,6 +57,11 @@ const Grid = ({ data }) => {
                 <h3>{c.title} &rarr;</h3>
               </header>
               {!c.leadText ? null : <p>{c.leadText}</p>}
+              {!c.text ? null : (
+                <p>
+                  <small>{c.text}</small>
+                </p>
+              )}
               {!c.blockquote ? null : (
                 <Link href={'/posts/' + c.id}>
                   <a>

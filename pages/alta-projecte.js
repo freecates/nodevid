@@ -1,11 +1,10 @@
 import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
-import Link from 'next/link';
-import Grid from '../components/Grid';
+import AppForm from '../components/AppForm';
 import Layout from '../components/Layout';
 
 const Equip = ({ data }) => {
-  const { title, formIcon, content } = data;
+  const { title } = data;
   return (
     <>
       <Head>
@@ -15,18 +14,7 @@ const Equip = ({ data }) => {
 
       <Layout>
         <h1 className='title'>{title}</h1>
-
-        <Grid data={content} />
-
-        <p className='description'>
-          <Link href='/alta-projecte'>
-            <a title='Alta Projecte'>
-              <img loading='lazy' src={`/${formIcon.url}`} alt={formIcon.alt} />
-              <br />
-              <code>Som-hi!</code>
-            </a>
-          </Link>
-        </p>
+        <AppForm />
       </Layout>
       <style jsx global>{`
         .card {
@@ -42,7 +30,7 @@ export const getStaticProps = async () => {
   const dataRes = await res.json();
   return {
     props: {
-      data: dataRes.find((x) => x.id == 5),
+      data: dataRes.find((x) => x.id == 7),
     },
   };
 };
