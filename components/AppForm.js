@@ -1,3 +1,4 @@
+import axios from 'axios';
 import validator from 'email-validator';
 import Link from 'next/link';
 import React, { Component } from 'react';
@@ -398,8 +399,37 @@ class AppForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
+      team_name: '',
+      lead_member_name: '',
+      lead_member_email: '',
+      lead_member_phone: '',
+      lead_member_description: '',
+      lead_member_nickname: '',
+      second_member_name: '',
+      second_member_email: '',
+      second_member_description: '',
+      second_member_nickname: '',
+      city: '',
+      address: '',
+      postal_code: 0,
+      total_blocks: 0,
+      public_yard: false,
+      public_garden: false,
+      balcony: false,
+      terrace: false,
+      hall: false,
+      corridor: false,
+      others: '',
+      node_type: '',
+      project_name: '',
+      description: '',
+      project_phase: '',
+      next_steps: '',
+      web: '',
+      twitter: '',
+      facebook: '',
+      neightbours_support: '',
+      rules_commitment: false,
       emailIsValid: false,
       submitted: false,
       isAccepted: false,
@@ -408,7 +438,9 @@ class AppForm extends Component {
   }
 
   validateEmail = () => {
-    this.setState({ emailIsValid: validator.validate(this.state.email) });
+    this.setState({
+      emailIsValid: validator.validate(this.state.lead_member_email),
+    });
   };
 
   handleInputChange(e) {
@@ -424,13 +456,89 @@ class AppForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email } = this.state;
+    const {
+      team_name,
+      lead_member_name,
+      lead_member_email,
+      lead_member_phone,
+      lead_member_description,
+      lead_member_nickname,
+      second_member_name,
+      second_member_email,
+      second_member_description,
+      second_member_nickname,
+      city,
+      address,
+      postal_code,
+      total_blocks,
+      public_yard,
+      public_garden,
+      balcony,
+      terrace,
+      hall,
+      corridor,
+      others,
+      node_type,
+      project_name,
+      description,
+      project_phase,
+      next_steps,
+      web,
+      twitter,
+      facebook,
+      neightbours_support,
+      rules_commitment,
+    } = this.state;
 
     axios({
       method: 'get',
-      url: `${formUrl}?name=${encodeURIComponent(
-        name
-      )}&email=${encodeURIComponent(email)}`,
+      url: `${formUrl}?team_name=${encodeURIComponent(
+        team_name
+      )}&lead_member_name=${encodeURIComponent(
+        lead_member_name
+      )}&lead_member_email=${encodeURIComponent(
+        lead_member_email
+      )}&lead_member_phone=${encodeURIComponent(
+        lead_member_phone
+      )}&lead_member_description=${encodeURIComponent(
+        lead_member_description
+      )}&lead_member_nickname=${encodeURIComponent(
+        lead_member_nickname
+      )}&second_member_name=${encodeURIComponent(
+        second_member_name
+      )}&second_member_email=${encodeURIComponent(
+        second_member_email
+      )}&second_member_description=${encodeURIComponent(
+        second_member_description
+      )}&second_member_nickname=${encodeURIComponent(
+        second_member_nickname
+      )}&city=${encodeURIComponent(city)}&address=${encodeURIComponent(
+        address
+      )}&postal_code=${encodeURIComponent(
+        postal_code
+      )}&total_blocks=${total_blocks}&public_yard=${encodeURIComponent(
+        public_yard
+      )}&public_garden=${encodeURIComponent(
+        public_garden
+      )}&balcony=${encodeURIComponent(balcony)}$terrace=${encodeURIComponent(
+        terrace
+      )}&hall=${encodeURIComponent(hall)}&corridor=${encodeURIComponent(
+        corridor
+      )}&others=${encodeURIComponent(others)}&node_type=${encodeURIComponent(
+        node_type
+      )}&project_name=${encodeURIComponent(
+        project_name
+      )}&description=${encodeURIComponent(
+        description
+      )}&project_phase=${encodeURIComponent(
+        project_phase
+      )}&next_steps=${encodeURIComponent(next_steps)}&web=${encodeURIComponent(
+        web
+      )}&twitter=${encodeURIComponent(twitter)}&facebook=${encodeURIComponent(
+        facebook
+      )}&neightbours_support=${encodeURIComponent(
+        neightbours_support
+      )}&rules_commitment=${encodeURIComponent(rules_commitment)}`,
     });
 
     this.setState({ submitted: true });
