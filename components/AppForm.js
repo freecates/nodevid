@@ -194,9 +194,7 @@ class SubscriptionForm extends Component {
             <label htmlFor='node_type'>
               <select name='node_type' id='node_type'>
                 <option value='node_type_sport'>Node Esport</option>
-                <option value='node_type_culture' selected>
-                  Node Cultura
-                </option>
+                <option value='node_type_culture'>Node Cultura</option>
                 <option value='node_type_botanic'>Node Botànic</option>
                 <option value='node_type_education'>Node Educació</option>
                 <option value='node_type_social'>Node Social</option>
@@ -289,9 +287,7 @@ class SubscriptionForm extends Component {
             <h3>Tens el suport de la resta del veïnatge</h3>
             <label htmlFor='neightbours_support'>
               <select name='neightbours_support' id='neightbours_support'>
-                <option value='neightbours_support_yes' selected>
-                  Sí
-                </option>
+                <option value='neightbours_support_yes'>Sí</option>
                 <option value='neightbours_support_no'>No</option>
                 <option value='neightbours_support_ns_nc'>Ns / Nc</option>
               </select>
@@ -363,6 +359,12 @@ class SubscriptionForm extends Component {
             width: 100%;
             padding: 0.5rem;
             margin: 0.5rem;
+          }
+          .button {
+            cursor: pointer;
+          }
+          .button[disabled] {
+            cursor: not-allowed;
           }
           .half-width input[type='checkbox'] {
             width: 50%;
