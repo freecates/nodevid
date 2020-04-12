@@ -17,7 +17,7 @@ const Toolkit = ({ data }) => {
         <p className='description'>{description}</p>
 
         <p className='description'>
-          <a href={guia.url} title={guia.name}>
+          <a href={guia.url} title={guia.name} target='_blank'>
             <img
               loading='lazy'
               src='/guia-toolkit.svg'

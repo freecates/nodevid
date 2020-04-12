@@ -77,7 +77,12 @@ const Grid = ({ data }) => {
                       <a
                         href={d.url}
                         title={`${d.name} - Descarrega`}
-                        className='dont-break-out'>
+                        className='dont-break-out'
+                        target={
+                          d.url.includes('drive.google.com')
+                            ? '_blank'
+                            : '_self'
+                        }>
                         {d.name}
                       </a>
                     </dd>
