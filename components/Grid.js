@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SocialIcon } from 'react-social-icons';
 
 const Grid = ({ data }) => {
   return (
@@ -16,9 +17,13 @@ const Grid = ({ data }) => {
             <>
               <h3>{c.teamName} &rarr;</h3>
               <dl>
-                <dt>Nom del projecte:</dt>
+                <dt>
+                  <strong>Nom del projecte:</strong>
+                </dt>
                 <dd>{c.projectName}</dd>
-                <dt>Contacte:</dt>
+                <dt>
+                  <strong>Contacte:</strong>
+                </dt>
                 <dd>
                   <a
                     href={`mailto:${c.contact}`}
@@ -26,24 +31,36 @@ const Grid = ({ data }) => {
                     {c.contact}
                   </a>
                 </dd>
-                <dt>Tipus:</dt>
+                <dt>
+                  <strong>Tipus:</strong>
+                </dt>
                 <dd>{c.type}</dd>
-                <dt>Descripció del projecte:</dt>
+                <dt>
+                  <strong>Descripció del projecte:</strong>
+                </dt>
                 <dd>{c.projectDescription}</dd>
                 {!c.publicProfile ? null : (
                   <>
-                    <dt>Perfil públic:</dt>
-                    {c.publicProfile.map((p, id) => (
-                      <dd key={p.type} id={id}>
-                        {p.type} :{' '}
+                    <dt>
+                      <strong>Perfil públic:</strong>
+                    </dt>
+                    <dd>
+                      {c.publicProfile.map((p, id) => (
                         <a
                           href={p.url}
                           title={`${p.type} de ${c.projectName}`}
                           className='dont-break-out'>
-                          {p.url}
+                          <SocialIcon
+                            url={p.url}
+                            bgColor='#ffffff'
+                            fgColor='#000000'
+                            style={{ height: 32, width: 32 }}
+                            key={p.type}
+                            id={id}
+                          />
                         </a>
-                      </dd>
-                    ))}
+                      ))}
+                    </dd>
                   </>
                 )}
               </dl>
@@ -71,7 +88,9 @@ const Grid = ({ data }) => {
               )}
               {!c.docs ? null : (
                 <dl>
-                  <dt>Docs:</dt>
+                  <dt>
+                    <strong>Docs:</strong>
+                  </dt>
                   {c.docs.map((d, id) => (
                     <dd key={d.name} id={id}>
                       <a

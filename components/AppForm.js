@@ -521,7 +521,7 @@ class AppForm extends Component {
         public_yard
       )}&public_garden=${encodeURIComponent(
         public_garden
-      )}&balcony=${encodeURIComponent(balcony)}$terrace=${encodeURIComponent(
+      )}&balcony=${encodeURIComponent(balcony)}&terrace=${encodeURIComponent(
         terrace
       )}&hall=${encodeURIComponent(hall)}&corridor=${encodeURIComponent(
         corridor
