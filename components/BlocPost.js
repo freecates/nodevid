@@ -26,7 +26,7 @@ const BlocPost = ({
       <meta name='description' content={blockquote} />
 
       <meta property='fb:app_id' content='1064356173625695' />
-      <meta property='og:url' content={`https://nodevid.now.sh/bloc/${id}`} />
+      <meta property='og:url' content={`https://nodevid.now.sh/posts/${id}`} />
       <meta property='og:type' content='article' />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={blockquote} />
@@ -99,7 +99,7 @@ const BlocPost = ({
       <div className='social-share-icons'>
         <div className='Post__some-network'>
           <FacebookShareButton
-            url={`https://nodevid.now.sh/bloc/${id}`}
+            url={`https://nodevid.now.sh/posts/${id}`}
             className='Post__some-network__share-button'>
             <FacebookIcon size={25} round />
           </FacebookShareButton>
@@ -107,7 +107,7 @@ const BlocPost = ({
 
         <div className='Post__some-network'>
           <TwitterShareButton
-            url={`https://nodevid.now.sh/bloc/${id}`}
+            url={`https://nodevid.now.sh/posts/${id}`}
             title={title}
             hashtags={['coronavirus']}
             via='AdhocCultura'
@@ -118,7 +118,7 @@ const BlocPost = ({
 
         <div className='Post__some-network'>
           <LinkedinShareButton
-            url={`https://nodevid.now.sh/bloc/${id}`}
+            url={`https://nodevid.now.sh/posts/${id}`}
             title={title}
             className='Post__some-network__share-button'>
             <LinkedinIcon size={25} round />
@@ -127,9 +127,9 @@ const BlocPost = ({
 
         <div className='Post__some-network'>
           <EmailShareButton
-            url={`https://nodevid.now.sh/bloc/${id}`}
+            url={`https://nodevid.now.sh/posts/${id}`}
             subject={title}
-            body={`Fes-li un cop d'ull a ${title} https://nodevid.now.sh/bloc/${id}`}
+            body={`Fes-li un cop d'ull a ${title} https://nodevid.now.sh/posts/${id}`}
             className='Post__some-network__share-button'>
             <EmailIcon size={25} round />
           </EmailShareButton>
