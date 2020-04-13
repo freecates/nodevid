@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
+import ResponsiveYoutube from '../components/ResponsiveYoutube';
 
 const Home = ({ data }) => {
   const { title, content } = data;
@@ -14,6 +15,9 @@ const Home = ({ data }) => {
       </Head>
 
       <Layout page={'home'}>
+        <ResponsiveYoutube
+          video={'https://www.youtube.com/embed/vvc7yNQTVxk?controls=0'}
+        />
         <h1 className='title'>Benvingut a {title}!</h1>
 
         <p className='description'>

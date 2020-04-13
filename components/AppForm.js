@@ -310,11 +310,11 @@ class SubscriptionForm extends Component {
                 Accepta les bases legals i la política de privacitat
                 <br />
                 <small>
-                  <Link href='/bases'>
+                  <Link href='/legal'>
                     <a
                       title='Consultat les bases legals i la política de privacitat'
                       className='important'>
-                      Llegiex les bases
+                      Llegiex les bases legals
                     </a>
                   </Link>
                 </small>
