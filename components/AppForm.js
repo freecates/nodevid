@@ -4,8 +4,7 @@ import Link from 'next/link';
 import React, { Component } from 'react';
 import ThankYou from './ThankYou';
 
-const formUrl =
-  'https://script.google.com/macros/s/AKfycbwM_WDArsr5E9yihmHmT65cU3bSR-aDtgsZS-_a_irkmKNjUWkA/exec';
+const formUrl = `https://script.google.com/macros/s/${process.env.GOOGLE_SCRIPT}/exec`;
 
 class SubscriptionForm extends Component {
   render() {
