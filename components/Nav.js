@@ -16,8 +16,8 @@ const Nav = ({ page }) => {
       <Link href='/espai'>
         <a>Espais Node</a>
       </Link>
-      <Link href='/toolkit'>
-        <a>Toolkit</a>
+      <Link href='/eines'>
+        <a>Eines</a>
       </Link>
       <Link href='/nodes'>
         <a>Descobreix</a>
