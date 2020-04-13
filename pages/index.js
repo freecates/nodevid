@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-unfetch';
+import Head from 'next/head';
 import Link from 'next/link';
 import Grid from '../components/Grid';
 import HTMLHead from '../components/HTMLHead';
@@ -10,6 +11,29 @@ const Home = ({ data }) => {
   return (
     <>
       <HTMLHead title={title} description={description} page={'home'} />
+      <Head>
+        <link rel='preconnect' href='https://i.ytimg.com' crossOrigin='true' />
+        <link
+          rel='preconnect'
+          href='https://yt3.ggpht.com'
+          crossOrigin='true'
+        />
+        <link
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+          crossOrigin='true'
+        />
+        <link
+          rel='preconnect'
+          href='https://static.doubleclick.net'
+          crossOrigin='true'
+        />
+        <link
+          rel='preconnect'
+          href='https://googleads.g.doubleclick.net'
+          crossOrigin='true'
+        />
+      </Head>
 
       <Layout page={'home'}>
         <ResponsiveYoutube
