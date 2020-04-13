@@ -1,16 +1,13 @@
 import fetch from 'isomorphic-unfetch';
-import Head from 'next/head';
 import AppForm from '../components/AppForm';
+import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Equip = ({ data }) => {
   const { title } = data;
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <HTMLHead title={title} />
 
       <Layout>
         <h1 className='title'>{title}</h1>

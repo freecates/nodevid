@@ -7,7 +7,7 @@ const Bloc = ({ data }) => {
   return (
     <>
       <Head>
-        <title>Bloc</title>
+        <title>Bloc | Nodevid</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

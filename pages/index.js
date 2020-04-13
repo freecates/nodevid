@@ -1,18 +1,15 @@
 import fetch from 'isomorphic-unfetch';
-import Head from 'next/head';
 import Link from 'next/link';
 import Grid from '../components/Grid';
+import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 import ResponsiveYoutube from '../components/ResponsiveYoutube';
 
 const Home = ({ data }) => {
-  const { title, content } = data;
+  const { title, description, content } = data;
   return (
     <>
-      <Head>
-        <title>Benvingut a {title}</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <HTMLHead title={title} description={description} page={'home'} />
 
       <Layout page={'home'}>
         <ResponsiveYoutube

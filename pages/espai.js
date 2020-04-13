@@ -1,16 +1,13 @@
 import fetch from 'isomorphic-unfetch';
-import Head from 'next/head';
 import Grid from '../components/Grid';
+import HTMLHead from '../components/HTMLHead';
 import Layout from '../components/Layout';
 
 const Espai = ({ data }) => {
   const { title, description, moreDescription, content } = data;
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <HTMLHead title={title} description={description} />
 
       <Layout>
         <h1 className='title'>{title}</h1>

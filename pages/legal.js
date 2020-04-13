@@ -6,7 +6,7 @@ const Bases = () => {
   return (
     <>
       <Head>
-        <title>Legal</title>
+        <title>Legal | Nodevid</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
