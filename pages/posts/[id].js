@@ -1,36 +1,20 @@
 import fetch from 'isomorphic-unfetch';
-import Head from 'next/head';
-import Link from 'next/link';
+import BlocPost from '../../components/BlocPost';
 import Layout from '../../components/Layout';
 
 const Post = ({ post }) => {
-  const { title, blockquote, content } = post;
+  const { title, blockquote, content, author, datePublished, id } = post;
   return (
     <>
-      <Head>
-        <title>
-          {title} - {blockquote}
-        </title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
       <Layout>
-        <h1 className='title'>{title}</h1>
-        <h2>
-          <blockquote>{blockquote}</blockquote>
-        </h2>
-        {content.map((c, id) => (
-          <div
-            key={c.id}
-            id={id}
-            dangerouslySetInnerHTML={{ __html: c.blockContent }}
-          />
-        ))}
-        <Link href={`/bloc`}>
-          <a>
-            <h3>&larr; Tornar</h3>
-          </a>
-        </Link>
+        <BlocPost
+          title={title}
+          blockquote={blockquote}
+          author={author}
+          datePublished={datePublished}
+          content={content}
+          id={id}
+        />
       </Layout>
       <style jsx global>{`
         .container {
