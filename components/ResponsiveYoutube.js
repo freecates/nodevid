@@ -1,11 +1,12 @@
 const ResponsiveYoutube = ({ video }) => (
-  <div class='video-container'>
+  <div className='video-container'>
     <iframe
       src={video}
       frameBorder='0'
       allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-      allowFullScreen></iframe>
-    <style jsx global>{`
+      allowFullScreen
+      loading='lazy'></iframe>
+    <style jsx>{`
       .video-container {
         overflow: hidden;
         position: relative;
