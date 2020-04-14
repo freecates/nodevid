@@ -8,6 +8,7 @@ const Grid = ({ data }) => {
         <div href='/' className='card' key={c.id} id={id}>
           {!c.picture ? null : (
             <img
+              width='100%'
               loading='lazy'
               src={c.picture}
               alt={`Imatge representativa de ${c.projectName}`}
