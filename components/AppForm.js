@@ -217,8 +217,8 @@ class SubscriptionForm extends Component {
                 name='description'
                 id='description'
                 placeholder='Descripció del projecte'
-                maxLength={340}
-                minLength={220}
+                maxLength={240}
+                minLength={120}
                 cols={30}
                 rows={10}
               />
@@ -236,8 +236,8 @@ class SubscriptionForm extends Component {
                 name='next_steps'
                 id='next_steps'
                 placeholder='Properes passes'
-                maxLength={340}
-                minLength={220}
+                maxLength={240}
+                minLength={120}
                 cols={30}
                 rows={10}
               />
