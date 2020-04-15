@@ -5,10 +5,10 @@ const Grid = ({ data }) => {
   return (
     <div className='grid'>
       {data.sort((a, b) => {
-              if (a.datePublished < b.datePublished) {
+              if (a.datePublished > b.datePublished) {
                 return -1;
               }
-              if (a.datePublished > b.datePublished) {
+              if (a.datePublished < b.datePublished) {
                 return 1;
               }
               return 0;
