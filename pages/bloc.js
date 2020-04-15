@@ -15,6 +15,11 @@ const Bloc = ({ data }) => {
         <h1 className='title'>Bloc</h1>
 
         <Grid data={data} />
+      <style jsx global>{`
+        .card:first-child {
+          flex-basis: 100%;
+        }
+      `}</style>
       </Layout>
     </>
   );
