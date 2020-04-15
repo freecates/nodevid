@@ -4,8 +4,16 @@ import { SocialIcon } from 'react-social-icons';
 const Grid = ({ data }) => {
   return (
     <div className='grid'>
-      {data.map((c, id) => (
-        <div href='/' className='card' key={c.id} id={id}>
+      {data.sort((a, b) => {
+              if (a.datePublished < b.datePublished) {
+                return -1;
+              }
+              if (a.datePublished > b.datePublished) {
+                return 1;
+              }
+              return 0;
+            }).map((c, id) => (
+        <div className='card' key={c.id} id={id}>
           {!c.picture ? null : (
             <img
               width='100%'
